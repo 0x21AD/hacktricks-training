@@ -14,13 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
+        uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502
         with:
-          role-to-assume: arn:aws:iam::344671934032:oidc-provider/token.actions.githubusercontent.com
-          role-session-name: GitHub_to_AWS_via_FederatedOIDC
-          role-arn: arn:aws:iam::344671934032:role/sts-lab-2-target
+          role-to-assume: arn:aws:iam::344671934032:role/sts-lab-2-target
+          role-session-name: target
           aws-region: ${{ env.AWS_REGION }}
       # Hello from AWS: WhoAmI
       - name: Sts GetCallerIdentity
