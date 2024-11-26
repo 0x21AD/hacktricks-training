@@ -26,4 +26,4 @@ jobs:
         run: |
           aws sts get-caller-identity
           aws iam list-attached-role-policies --role-name sts-lab-2-target
-          aws --profile lab1 iam get-policy-version --policy-arn "arn:aws:iam::344671934032:policy/sts_lab_2_target" --version-id v1
+          aws iam get-policy-version --policy-arn "arn:aws:iam::344671934032:policy/sts_lab_2_target" --version-id v1
