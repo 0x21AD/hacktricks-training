@@ -27,3 +27,4 @@ jobs:
           aws sts get-caller-identity
           aws iam list-attached-role-policies --role-name sts-lab-2-target
           aws iam get-policy-version --policy-arn "arn:aws:iam::344671934032:policy/sts_lab_2_target" --version-id v1
+          aws secretsmanager get-secret-value --secret-id flag_sts_lab_2
