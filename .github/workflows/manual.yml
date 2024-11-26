@@ -25,4 +25,4 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
-          aws iam list-attached-user-policies --user-name target
+          aws iam list-attached-role-policies --role-name sts-lab-2-target
