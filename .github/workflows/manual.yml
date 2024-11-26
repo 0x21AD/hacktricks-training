@@ -20,6 +20,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::344671934032:oidc-provider/token.actions.githubusercontent.com
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          role-arn: arn:aws:iam::344671934032:role/sts-lab-2-target
           aws-region: ${{ env.AWS_REGION }}
       # Hello from AWS: WhoAmI
       - name: Sts GetCallerIdentity
